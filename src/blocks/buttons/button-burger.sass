@@ -1,0 +1,11 @@
+.button-burger
+  background-color: #ffffff
+  width: 24px
+  height: 24px
+  background: url('./assets/image/menu__burger__icon__img.svg') center center no-repeat
+  background-size: cover
+  border: none
+  &--desktop--hidden
+		display: none
+		@include maxQ(720px)
+			display: block

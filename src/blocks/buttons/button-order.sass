@@ -1,0 +1,25 @@
+.button-order
+	display: inline-block
+	padding: 13px 25px
+	font-family: Arial
+	font-style: normal
+	font-weight: normal
+	font-size: 17px
+	line-height: 24px
+	text-align: center
+	text-decoration: none
+	color: $white
+	background: $dark
+	border: 1px solid $dark
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16)
+	border-radius: 4px
+	&--small
+		padding: 8px 20px
+		font-size: 15px
+		line-height: 16px
+	@include smart-hover
+		transition: .3s
+		&:hover
+			color: $dark
+			background: $white
+			

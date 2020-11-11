@@ -1,0 +1,147 @@
+.header
+	padding: 26px 0
+	&__container
+		display: flex
+		align-items: center
+		max-width: 1378px
+	&__logo
+		width: 236px
+		height: 44px
+		&-link
+			text-decoration: none
+	&__nav
+		display: flex
+		align-items: center
+		margin-right: 20px
+		margin-left: auto
+
+	&__link
+		position: relative
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 19px
+		text-decoration: none
+		color: $gray
+		@include smart-hover
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				top: calc(100% + 2px)
+				display: block
+				+box(0, 2px)
+				background-color: $gray
+				transition: .3s
+				opacity: 0
+			&:hover
+				&::after
+					width: 100%
+					opacity: 1
+
+		&:not(:last-child)
+			margin-right: 22px
+		&--active
+			color: #036FC7
+			@include smart-hover
+				&::after
+					background-color: #036FC7
+	&__mobile-menu
+		&--desktop--hidden
+			display: none
+		
+
+@include maxQ(1440px)
+	.header
+		&__container
+			max-width: 1180px
+
+@include maxQ(1240px)
+	.header
+		padding: 20px 0
+		&__container
+			flex-wrap: wrap
+			max-width: 1000px
+			justify-content: space-between
+		&__nav
+			justify-content: space-between
+			flex-basis: 100%
+			order: 1
+			margin: 10px 0 0
+
+@include maxQ(1080px)
+	.header
+		&__container
+			max-width: 960px
+
+
+@include maxQ(992px)
+	.header
+		&__container
+			max-width: 830px
+
+@include maxQ(840px)
+	.header
+		&__container
+			max-width: 740px
+
+
+@include maxQ(768px)
+	.header
+		&__container
+			max-width: 710px
+
+@include maxQ(720px)
+	.header
+		position: relative
+		padding: 10px 0
+		&__container
+			max-width: 290px * 100% / 320px
+		&__nav
+			display: flex
+			flex-direction: column
+			align-items: center
+			&--mobile
+				&--hidden
+					display: none
+		&__link
+			font-size: 20px
+			&:not(:last-child)
+				margin-right: 0
+				margin-bottom: 15px
+		&__button
+			order: 1
+			width: 80%
+			margin: 25px auto 0 auto
+			padding: 13px	25px
+			&--mobile
+				&--hidden
+					display: none
+		&__mobile-menu
+			position: absolute
+			top: 10px
+			left: 10px
+			right: 10px
+			flex-direction: column
+			align-items: center
+			padding: 20px
+			background-color: #f2f2f2
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+
+			.header__nav--mobile--hidden
+				display: flex
+			.header__button--mobile--hidden
+				display: inline-block
+			&--active
+				display: flex
+		&__button-close
+			position: absolute
+			right: 15px
+			top: 15px
+			display: block
+			padding: 0
+			height: 20px
+			width: 20px
+			border: none
+			outline: none
+			background: url('./assets/image/close__img.svg') center
