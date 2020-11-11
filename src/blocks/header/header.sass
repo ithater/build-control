@@ -61,7 +61,7 @@
 		padding: 20px 0
 		&__container
 			flex-wrap: wrap
-			max-width: 1000px
+			max-width: 960px
 			justify-content: space-between
 		&__nav
 			justify-content: space-between
@@ -69,27 +69,17 @@
 			order: 1
 			margin: 10px 0 0
 
-@include maxQ(1080px)
-	.header
-		&__container
-			max-width: 960px
-
 
 @include maxQ(992px)
 	.header
 		&__container
 			max-width: 830px
 
-@include maxQ(840px)
-	.header
-		&__container
-			max-width: 740px
-
-
-@include maxQ(768px)
+@include maxQ(865px)
 	.header
 		&__container
 			max-width: 710px
+
 
 @include maxQ(720px)
 	.header

@@ -9,7 +9,7 @@ const isProd = !isDev;
 
 const PATHS = require('./paths');
 
-const filename = ext => (isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`);
+const filename = ext => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
 
 
 module.exports = {
