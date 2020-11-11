@@ -22,7 +22,6 @@ module.exports = {
 	output: {
 		filename: `js/${filename('js')}`,
 		path: `${PATHS.build}/`,
-		publicPath: '/'
 	},
 
 	// Алиасы
