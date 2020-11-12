@@ -1,0 +1,72 @@
+.advantages
+	padding-top: 74px
+	padding-bottom: 71px - 25px // 20px is an advantage padding
+	&__container
+		max-width: 1057px
+		display: flex
+		justify-content: center
+	&__advantage
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 325px
+		margin-bottom: 25px
+		&:not(:last-child)
+			margin-right: 41px
+
+	&__title
+		position: relative
+		padding-top: 68px
+		margin-bottom: 10px
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 24px
+		text-align: center
+		color: $dark
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			+box(100%, 48px)
+		&--effective
+			&::after
+				background: url('./assets/image/effective__img.svg') center / 48px no-repeat
+		&--loseless
+			&::after
+				background: url('./assets/image/loseless__img.svg') center / 48px no-repeat
+		&--safe
+			&::after
+				background: url('./assets/image/safe__img.svg') center / 48px no-repeat
+
+	&__subtitle
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		text-align: center
+		color: $gray
+
+@include maxQ(1100px)
+	.advantages
+		&__container
+			flex-wrap: wrap
+			max-width: 900px
+		&__advantage
+			&:nth-child(2n)
+				margin-right: 0
+
+@include maxQ(720px)
+	.advantages
+		&__container
+			max-width: 325px + 10px * 2 // 10 is an advantages padding
+			flex-wrap: wrap
+		&__advantage
+			padding: 0 10px
+			&:not(:last-child)
+				margin-right: 0
+
+	
+
+
