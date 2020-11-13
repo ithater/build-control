@@ -1,0 +1,135 @@
+.purpose
+	padding-top: 30px
+	padding-bottom: 73px
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		max-width: 1056px
+	&__title
+		align-self: center
+		margin-bottom: 21px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		text-align: center
+		color: $dark
+	&__text
+		align-self: center
+		margin-bottom: 28px
+		max-width: 827px
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+		color: $gray
+	&-item
+		display: flex
+		align-items: center
+
+		$this: &
+		&:nth-child(2n)
+			align-self: flex-end
+			#{$this}__image
+				order: -1
+		&__description
+			&--delivery
+				max-width: 500px
+			&--optimize
+				max-width: 515px
+			&--under-control
+				max-width: 550px
+		&__image
+			height: 272px
+			&--delivery
+				width: 402px
+				margin-left: 91px
+			&--optimize
+				width: 358px
+				margin-right: 101px
+			&--under-control
+				width: 416px
+				margin-left: 34px
+		&__title
+			margin-bottom: 19px
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 24px
+			color: $dark
+		&__text
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: $gray
+	&__item
+		&:not(:last-child)
+			margin-bottom: 64px
+	
+@include maxQ(1100px)
+	.purpose
+		&__container
+			align-items: center
+			max-width: 960px
+		&-item
+			&:nth-child(2n)
+				align-self: center
+
+
+@include maxQ(992px)
+	.purpose
+		&__container
+			max-width: 758px
+		&__text
+			margin-bottom: 50px
+		&-item
+			&__image
+				width: auto
+				height: 190px
+				&--delivery
+					margin-left: 30px
+				&--optimize
+					margin-right: 30px
+				&--under-control
+					margin-left: 30px
+
+@include maxQ(992px)
+	.purpose
+		&__container
+			max-width: 758px
+		&__text
+			margin-bottom: 50px
+
+@include maxQ(768px)
+	.purpose
+		&__container
+			max-width: 650px
+
+
+@include maxQ(678px)
+	.purpose
+		&__container
+			max-width: 290px * 100% / 320px
+		&-item
+			flex-direction: column
+			&__description
+				max-width: 100%
+			&__image
+				width: 70%
+				height: auto
+				order: 1 !important
+				margin: 20px 0 0
+
+@include maxQ(440px)
+	.purpose
+		&-item
+			&__image
+				width: 80%
+				height: auto
+				order: 1 !important
+				margin: 20px 0 0
+
+
