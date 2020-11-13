@@ -1,0 +1,144 @@
+.interlude
+	padding-top: 71px
+	padding-bottom: 41px
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1040px
+	&__block
+		display: flex
+		width: 100%
+		&--chaos
+			z-index: 5
+			flex-direction: column
+			align-items: center
+			margin-bottom: 144px
+		&--care
+			margin-top: 168px
+	&__title
+		margin-bottom: 16px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		color: $dark
+		&--single
+			max-width: 781px
+			margin-bottom: 0
+			text-align: center
+	&__text
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		color: $gray
+		text-align: center
+		margin-bottom: 28px
+		&--tac--left
+			text-align: left
+	
+	&__background
+		padding-bottom: 304px
+
+	&__image
+		object-fit: cover
+		&--chaos
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			z-index: 10
+			max-width: 1040px
+			height: 304px
+		&--care
+			max-width: 464px
+			height: 400px
+	&__holder
+		max-width: 542px
+	&__motto
+		position: relative
+		z-index: 5
+		display: inline-block
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			z-index: -1
+			+box(100%, 50%)
+			background: #FFD042
+
+@include maxQ(1100px)
+	.interlude
+		padding-top: 46px
+		padding-bottom: 41px
+		&__container
+			max-width: 900px
+		&__block
+			&--chaos
+				margin-bottom: 104px
+			&--care
+				margin-top: 128px
+		&__title
+			max-width: 550px
+			font-size: 29px
+
+
+
+@include maxQ(930px)
+	.interlude
+		&__container
+			max-width: 750px
+		&__block
+			&--chaos
+				margin-bottom: 94px
+			&--care
+				flex-wrap: wrap
+				margin-top: 118px
+		&__image
+			&--care
+				margin-left: auto
+				margin-top: 20px
+
+@include maxQ(768px)
+	.interlude
+		&__container
+			max-width: 650px
+		&__block
+			&--chaos
+				margin-bottom: 94px
+			&--care
+				flex-wrap: wrap
+				margin-top: 118px
+		&__image
+			&--care
+				margin-left: auto
+				margin-top: 20px
+		&__title
+			&--single
+				font-size: 27px
+
+@include maxQ(678px)
+	.interlude
+		&__container
+			max-width: 290px * 100% / 320px
+		&__text
+			font-size: 16px
+		&__title
+			font-size: 25px
+
+@include maxQ(576px)
+	.interlude
+		&__image
+			&--care
+				width: 100%
+				height: auto
+
+@include maxQ(440px)
+	.interlude
+		&__title 
+			font-size: 22px
