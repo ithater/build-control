@@ -1,0 +1,17 @@
+.mark
+	position: relative
+	z-index: 5
+	display: inline-block
+	font-style: normal
+	font-weight: normal
+	font-size: 20px
+	line-height: 32px
+	color: $dark
+	&::before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		z-index: -1
+		+box(100%, 50%)
+		background: #FFD042

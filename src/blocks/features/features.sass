@@ -1,0 +1,123 @@
+.features
+	padding-top: 70px
+	padding-bottom: 74px
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1056px
+	&__title
+		margin-bottom: 21px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		text-align: center
+		color: $dark
+	&__text
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+		color: $gray
+		&--small
+			max-width: 643px
+			margin-bottom: 32px
+	&__list
+		display: grid
+		grid-template-columns: repeat(3, 334px)
+		grid-gap: 33px 27px
+		margin: 0 0 22px
+		padding: 0
+		list-style: none
+
+	&-feature
+		width: 334px
+		padding-left: 64px
+		background: top left / 48px no-repeat
+		&--concrete
+			background-image: url('./assets/image/concrete__img.svg')
+		&--utilization
+			background-image: url('./assets/image/utilization__img.svg')
+		&--timbering
+			background-image: url('./assets/image/timbering__img.svg')
+		&--precasts
+			background-image: url('./assets/image/precasts__img.svg')
+		&--facades
+			background-image: url('./assets/image/facades__img.svg')
+		&--trim
+			background-image: url('./assets/image/trim__img.svg')
+		&--scaffolding
+			background-image: url('./assets/image/scaffolding__img.svg')
+		&--equipment
+			background-image: url('./assets/image/equipment__img.svg')
+		&--electrics
+			background-image: url('./assets/image/electrics__img.svg')
+
+		&__title
+			margin-bottom: 11px
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 24px
+			color: $dark
+		&__text
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: $gray
+
+@include maxQ(1080px)
+	.features
+		&__container
+			max-width: 960px
+		&__list
+			grid-template-columns: repeat(2, 334px)
+		&__feature
+			&:nth-child(2n - 1)
+				&:last-child
+					grid-column: span 2
+					margin: auto
+
+@include maxQ(726px)
+	.features
+		padding-top: 20px
+		&__container
+			max-width: 80%
+		&__title
+			font-size: 30px
+		&__text
+			font-size: 18px
+		&__mark
+			font-size: 18px
+		&__list
+			width: 100%
+			grid-template-columns: 1fr
+		&__feature
+			&:nth-child(2n)
+				margin: 0 0 0 auto
+			&:nth-child(2n - 1)
+				&:last-child
+					grid-column: 1
+
+@include maxQ(450px)
+	.features
+		&__container
+			max-width: 290px * 100% / 320px
+		&__list
+			width: 100%
+			grid-template-columns: 1fr
+		&__feature
+			&:nth-child(2n)
+				margin: 0 0 0 auto
+			&:nth-child(2n - 1)
+				&:last-child
+					grid-column: 1
+		&-feature
+			width: 100%
+				
+				
+			
+
