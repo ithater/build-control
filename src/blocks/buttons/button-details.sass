@@ -1,5 +1,5 @@
 .button-details
-	display: inline-block
+	display: block
 	padding: 12px 25px
 	font-family: Inter
 	font-style: normal
@@ -18,3 +18,10 @@
 		&:hover
 			background: #ffffffd2
 			border-color: $dark
+	&--dark
+		color: $white
+		background: $dark
+		@include smart-hover
+			&:hover
+				background: #ffffffd2
+				color: #212B31

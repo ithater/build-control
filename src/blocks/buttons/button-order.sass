@@ -1,5 +1,5 @@
 .button-order
-	display: inline-block
+	display: block
 	padding: 12px 25px
 	font-family: Arial
 	font-style: normal
@@ -22,4 +22,11 @@
 		&:hover
 			color: $dark
 			background: $white
-			
+	&--light
+		background: $white
+		border: 1px solid #DADEDF
+		color: $dark
+		@include smart-hover
+			&:hover
+				color: $white
+				background: $dark

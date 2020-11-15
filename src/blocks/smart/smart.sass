@@ -1,0 +1,159 @@
+.smart
+	padding-top: 143px
+	padding-bottom: 118px
+	background: url('./assets/image/smart__background.png') calc(100%) 144px/ 618px 493px no-repeat
+	background-color: $dark
+	&__container
+	&__title
+		margin-bottom: 50px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		color: $white
+
+	&-application
+		margin: 0
+		padding: 0
+		max-width: 589px
+		list-style: none
+		&__item
+			&:not(:last-child)
+				margin-bottom: 24px
+		&-item
+			position: relative
+			padding-left: 40px
+			&--small
+				max-width: 469px
+			&--medium
+				max-width: 572px
+			&::before
+				content: ''
+				position: absolute
+				top: 9px
+				left: 0
+				display: block
+				+box(8px)
+				border-radius: 50%
+				background-color: $white
+			&__title
+				margin-bottom: 10px
+				font-style: normal
+				font-weight: normal
+				font-size: 18px
+				line-height: 24px
+				color: $white
+			&__text
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 24px
+				color: rgba(255, 255, 255, 0.75)
+
+	&__application
+		margin-bottom: 50px
+
+	&__holder
+		display: flex
+		margin-bottom: 127px
+	&__button
+		&:not(:last-child)
+			margin-right: 16px
+
+	&-cooperation
+		display: grid
+		grid-gap: 25px 18px
+		grid-template-columns: repeat( 3, 340px )
+		justify-content: center
+		margin: 0
+		padding: 0
+		list-style: none
+		&-item
+			max-width: 340px
+			padding-top: 68px
+			background: top center / 48px no-repeat
+			&--subcontractor
+				background-image: url('./assets/image/subcontractor__img.svg')
+			&--provider
+				background-image: url('./assets/image/provider__img.svg')
+			&--conformity
+				background-image: url('./assets/image/conformity__img.svg')
+			&__title
+				margin-bottom: 10px
+				font-style: normal
+				font-weight: normal
+				font-size: 18px
+				line-height: 24px
+				text-align: center
+				color: $white
+			&__text
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 24px
+				text-align: center
+				color: rgba(255, 255, 255, 0.75)
+
+@include maxQ(1370px)
+	.smart
+		position: relative
+		z-index: 10
+		&::before
+			content: ''
+			+absolute-full
+				background-color: rgba(33, 43, 49, 0.90)
+				z-index: -1
+
+@include maxQ(1110px)
+	.smart
+		&__container
+			max-width: 960px
+		&-cooperation
+			grid-template-columns: repeat( 2, 340px )
+			&__item
+				&:last-child
+					grid-column: span 2
+					margin: auto
+
+@include maxQ(992px)
+	.smart
+		background-position-y: 218px
+		&__container
+			max-width: 700px
+
+@include maxQ(710px)
+	.smart
+		padding-bottom: 70px
+		&__container
+			max-width: 290px * 100% / 320px
+		&-cooperation
+			grid-template-columns: 80%
+			&__item
+				&:nth-child(2n)
+					margin-left: auto
+				&:last-child
+					grid-column: 1
+					margin: 0
+
+@include maxQ(450px)
+	.smart
+		padding-top: 100px
+		background-position-y: 230px
+		&__title
+			text-align: center
+		&-cooperation
+			grid-template-columns: 1fr
+			&__item
+				&:nth-child(2n)
+					margin-left: auto
+				&:last-child
+					grid-column: 1
+					margin: 0
+		&__holder
+			flex-direction: column
+			align-items: center
+		&__button
+			width: 80%
+			&:not(:last-child)
+				margin-bottom: 10px
+				margin-right: 0

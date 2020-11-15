@@ -1,6 +1,6 @@
 .safety
 	padding-top: 50px
-	padding-bottom: 72px
+	padding-bottom: 144px
 	&__container
 		display: flex
 		flex-direction: column
@@ -35,6 +35,10 @@
 		padding: 0
 		list-style: none
 		padding-bottom: 62px - 22px // 22px is an item margin
+	&__item
+		margin-bottom: 22px
+		margin-left: 16px
+		margin-right: 17px
 	&-item
 		display: flex
 		flex-direction: column
@@ -42,9 +46,6 @@
 		align-items: center
 		background: top center / 48px no-repeat
 		max-width: 300px
-		margin-bottom: 22px
-		margin-left: 16px
-		margin-right: 17px
 		&--drop-pollution
 			max-width: 322px
 			background-image: url('./assets/image/drop__pollution__img.svg')
@@ -53,7 +54,6 @@
 			background-image: url('./assets/image/improved__management__img.svg')
 		&--improved-influence
 			max-width: 325px
-
 			background-image: url('./assets/image/improved__influence__img.svg')
 		&__title
 			margin-bottom: 11px
@@ -97,6 +97,7 @@
 
 @include maxQ(1110px)
 	.safety
+		padding-bottom: 72px
 		&__container
 			max-width: 960px
 		&-offer
@@ -123,8 +124,10 @@
 		&__list
 			flex-direction: column
 			width: 80%
-		&-item
+		&__item
 			margin: 0 0 20px
+
+		&-item
 			&:nth-child(2n)
 				align-self: flex-end
 			&:nth-child(2n - 1)
@@ -146,6 +149,3 @@
 				align-self: center
 			&:nth-child(2n - 1)
 				align-self: center
-				
-
-
