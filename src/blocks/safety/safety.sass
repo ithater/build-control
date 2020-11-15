@@ -1,0 +1,151 @@
+.safety
+	padding-top: 50px
+	padding-bottom: 72px
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-width: 1056px + 33px // 33px is an item margin
+	&__title
+		margin-bottom: 17px
+		padding-top: 19px
+		padding-right: 33px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		text-align: center
+		color: $dark
+		background: url('./assets/image/safety__flower__img.svg') top right / 42px 40px no-repeat
+	&__text
+		max-width: 857px
+		margin-bottom: 48px
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+		color: $gray
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin: 0
+		padding: 0
+		list-style: none
+		padding-bottom: 62px - 22px // 22px is an item margin
+	&-item
+		display: flex
+		flex-direction: column
+		padding-top: 67px
+		align-items: center
+		background: top center / 48px no-repeat
+		max-width: 300px
+		margin-bottom: 22px
+		margin-left: 16px
+		margin-right: 17px
+		&--drop-pollution
+			max-width: 322px
+			background-image: url('./assets/image/drop__pollution__img.svg')
+		&--improved-management
+			max-width: 333px
+			background-image: url('./assets/image/improved__management__img.svg')
+		&--improved-influence
+			max-width: 325px
+
+			background-image: url('./assets/image/improved__influence__img.svg')
+		&__title
+			margin-bottom: 11px
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 24px
+			text-align: center
+			color: $dark
+		&__text
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			text-align: center
+			color: $gray
+	&-offer
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		width: 100%
+		padding: 40px 40px 40px 104px
+		border-radius: 5px
+		background: url('./assets/image/offer__img.svg') 40px 50% / 40px no-repeat
+		background-color: #F6F8F9
+		&__title
+			font-style: normal
+			font-weight: 500
+			font-size: 18px
+			line-height: 32px
+			color: $dark
+		&__text
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 32px
+			color: $dark
+		&__button
+			display: block
+			margin-left: auto
+
+@include maxQ(1110px)
+	.safety
+		&__container
+			max-width: 960px
+		&-offer
+			justify-content: center
+			&__button
+				margin: 20px 0 0
+
+@include maxQ(992px)
+	.safety
+		&__container
+			max-width: 750px
+		&-offer
+			justify-content: center
+			max-width: 600px
+			padding: 104px 40px 40px
+			background-position: center 40px
+			&__button
+				margin: 20px 0 0
+
+@include maxQ(720px)
+	.safety
+		&__container
+			max-width: 290px * 100% / 320px
+		&__list
+			flex-direction: column
+			width: 80%
+		&-item
+			margin: 0 0 20px
+			&:nth-child(2n)
+				align-self: flex-end
+			&:nth-child(2n - 1)
+				align-self: flex-start
+
+		&-offer
+			padding-left: 20px
+			padding-right: 20px
+			&__title,
+			&__text
+				text-align: center
+
+@include maxQ(450px)
+	.safety
+		&__list
+			width: 100%
+		&-item
+			&:nth-child(2n)
+				align-self: center
+			&:nth-child(2n - 1)
+				align-self: center
+				
+
+
