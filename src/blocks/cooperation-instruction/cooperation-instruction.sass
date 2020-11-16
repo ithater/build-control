@@ -1,0 +1,119 @@
+.cooperation-instruction
+	padding-top: 143px
+	padding-bottom: 48px
+	&__container
+		display: flex
+		justify-content: space-between
+	&__holder
+		max-width: 462px
+		flex-shrink: 0
+	&__title
+		margin-bottom: 21px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		color: $dark
+	&__text
+		margin-bottom: 60px
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		color: $gray
+	&__image
+		+box(336px, 392px)
+	&__list
+		max-width: 520px
+		margin: 0
+		padding: 0
+		list-style: none
+	&__item
+		margin-bottom: 30px
+	&-item
+		position: relative
+		padding-left: 72px
+		&::before
+			position: absolute
+			top: 0
+			left: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			+box(38px)
+			border: 1px solid #DADEDF
+			font-weight: normal
+			font-size: 16px
+			line-height: 19px
+			color: $gray
+		@for $i from 1 through 4
+			&--number--#{$i}
+				&::before
+					content: '#{$i}'
+		&__title
+			margin-bottom: 10px
+			font-style: normal
+			font-weight: normal
+			font-size: 17px
+			line-height: 24px
+			color: $dark
+		&__text
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: $gray
+	&__button
+		&:not(:last-child)
+			margin-right: 16px
+	&__buttons
+		display: flex
+
+@include maxQ(1080px)
+	.cooperation-instruction
+		&__container
+			max-width: 960px
+			
+@include maxQ(992px)
+	.cooperation-instruction
+		&__container
+			flex-direction: column
+			align-items: center
+			max-width: 740px
+		&__title,
+		&__text
+			text-align: center
+		&__holder
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 40px
+		&__image
+			+box(300px, auto)
+
+@include maxQ(576px)
+	.cooperation-instruction
+		padding-top: 68px
+		&__container
+			max-width: 290px * 100% / 320px
+		&__title,
+		&__text
+			text-align: center
+		&__holder
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 40px
+		&__image
+			+box(270px, auto)
+		&-item
+			padding-left: 55px
+		&__buttons
+			display: flex
+			flex-direction: column
+		&__button
+			width: 100%
+			&:not(:last-child)
+				margin-right: 0px
+				margin-bottom: 12px
+				
