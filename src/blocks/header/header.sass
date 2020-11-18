@@ -112,18 +112,20 @@
 			top: 10px
 			left: 10px
 			right: 10px
+			display: flex
 			flex-direction: column
 			align-items: center
 			padding: 20px
 			background-color: #f2f2f2
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
-
+			transition: .6s
+			transform: translateX(-120%)
 			.header__nav--mobile--hidden
 				display: flex
 			.header__button--mobile--hidden
 				display: inline-block
 			&--active
-				display: flex
+				transform: translateX(0%)
 		&__button-close
 			position: absolute
 			right: 15px
