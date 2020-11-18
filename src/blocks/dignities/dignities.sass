@@ -1,0 +1,167 @@
+.dignities
+	padding-top: 48px
+	padding-bottom: 79px - 41px //41px is a revard margin
+	padding-left: 94px
+	&__container
+		max-width: 1150px
+	&__title
+		margin-bottom: 17px
+		font-style: normal
+		font-weight: normal
+		font-size: 32px
+		line-height: 48px
+		text-align: center
+		color: $dark
+	&__text
+		margin-bottom: 55px
+		font-style: normal
+		font-weight: normal
+		font-size: 20px
+		line-height: 32px
+		text-align: center
+		color: $dark
+	&__holder
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		margin-bottom: 127px
+	&__list
+		max-width: 452px
+		margin: 0
+		padding: 0
+		list-style: none
+	&__dignity
+		&:not(:last-child)
+			margin-bottom: 30px
+	&-dignity
+		padding-left: 64px
+		background: top left / 48px no-repeat
+		&--awards
+			background-image: url('./assets/image/awards__img.svg')
+		&--big-potential
+			background-image: url('./assets/image/big__potential__img.svg')
+		&--leader-choice
+			background-image: url('./assets/image/leader__choice__img.svg')
+		&--stable-development
+			background-image: url('./assets/image/stable__development__img.svg')
+		&__title
+			font-style: normal
+			font-weight: normal
+			font-size: 18px
+			line-height: 24px
+			color: $dark
+			margin-bottom: 10px
+		&__text
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: $gray
+
+	&-rewards
+		display: flex
+		align-items: flex-end
+		flex-wrap: wrap
+		justify-content: center
+		max-width: 672px
+		margin: 0
+		padding: 0
+		list-style: none
+		&-reward
+			display: flex
+			flex-direction: column
+			align-items: center
+			$this: &
+			&--con-tech
+				width: 126px
+				#{$this}__text
+					margin-top: 32px
+				#{$this}__image
+					+box(126px, 112px)
+
+			&--con-tech-ec
+				width: 164px
+				#{$this}__text
+					margin-top: 44px
+				#{$this}__image
+					+box(164px, 88px)
+
+			&--global-con-tech
+				width: 162px
+				#{$this}__text
+					margin-top: 33px
+				#{$this}__image
+					+box(162px, 110px)
+			&--ec-prop-tech
+				width: 184px
+				#{$this}__text
+					margin-top: 32px
+					padding: 0 2px
+				#{$this}__image
+					+box(184px, 112px)
+			&__text
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 19px
+				text-align: center
+				color: $gray
+		&__reward
+			margin-bottom: 41px
+			&:nth-child(1)
+				margin-right: 119px
+			&:nth-child(2)
+				margin-right: 101px
+
+	&__rewards
+		margin: auto
+
+@include maxQ(1400px)
+	.dignities
+		padding-left: 0
+
+@include maxQ(1180px)
+	.dignities
+		&__container
+			max-width: 960px
+		&__list
+			max-width: 400px
+		&-dignity
+			padding-left: 58px
+
+@include maxQ(992px)
+	.dignities
+		&__container
+			max-width: 740px
+		&__holder
+			flex-wrap: wrap
+			justify-content: center
+		&__list
+			max-width: 550px
+			margin-bottom: 50px
+		&-dignity
+			padding-left: 58px
+
+@include maxQ(720px)
+	.dignities
+		&__container
+			max-width: 290px * 100% / 320px
+		&-rewards
+			justify-content: space-evenly
+			&__reward
+				&:nth-child(2n)
+					margin-right: 0
+				&:nth-child(2n - 1)
+					margin-right: 100px
+
+@include maxQ(520px)
+	.dignities
+		&__container
+		&-rewards
+			flex-direction: column
+			align-items: center
+			&__reward
+				&:nth-child(2n)
+					margin-right: 0
+				&:nth-child(2n - 1)
+					margin-right: 0

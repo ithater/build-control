@@ -1,0 +1,99 @@
+.reviews-slider
+	max-width: 614px
+	background: url('./assets/image/quote.png') 41px 45px / 101px 77px no-repeat
+	background-color: #F6F8F9
+	border-radius: 5px
+	padding-top: 60px
+	padding-bottom: 56px
+	&__container
+		flex-direction: column
+		overflow: hidden
+	&-slide
+		width: 100%
+		padding-left: 87px
+		padding-right: 92px
+		&__text
+			margin-bottom: 28px
+			font-style: normal
+			font-weight: normal
+			font-size: 30px
+			line-height: 48px
+			color: $dark
+		&-author
+			display: flex
+			align-items: center
+			&__avatar
+				+box(48px)
+				margin-right: 8px
+				border-radius: 50%
+			&__info
+				display: flex
+				flex-direction: column
+			&__name
+				margin-bottom: 1px
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 19px
+				color: $dark
+			&__post
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 19px
+				color: $gray
+
+	&__pagination
+		display: flex
+
+		margin-top: 21px
+		padding-left: 92px
+		height: 8px
+	&__dot
+		display: inline-block
+		+box(8px)
+		background: rgba(3, 111, 199, 0.2)
+		border-radius: 50%
+		cursor: pointer
+		&:not(:last-child)
+			margin-right: 8px
+		&--active
+			background: #036FC7
+
+@include maxQ(1180px)
+	.reviews-slider
+		max-width: 500px
+		&-slide
+			padding-left: 50px
+			padding-right: 50px
+			&__text
+		&__pagination
+			padding-left: 50px
+
+@include maxQ(992px)
+	.reviews-slider
+		max-width: 550px
+
+@include maxQ(720px)
+	.reviews-slider
+		max-width: 100%
+		&-slide
+			padding-left: 30px
+			padding-right: 30px
+			&__text
+				font-size: 26px
+				line-height: 38px
+		&__pagination
+			padding-left: 30px
+
+@include maxQ(440px)
+	.reviews-slider
+		max-width: 100%
+		&-slide
+			padding-left: 20px
+			padding-right: 20px
+			&__text
+				font-size: 20px
+				line-height: 28px
+		&__pagination
+			padding-left: 20px

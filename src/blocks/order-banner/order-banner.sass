@@ -1,0 +1,72 @@
+.order-banner
+	padding-top: 70px
+	padding-bottom: 75px
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 117px 38px
+
+		border-radius: 6px
+		background: url('./assets/image/banner__background.png') left top / cover	no-repeat,
+		#FFD042
+
+	&__title
+		margin-bottom: 54px
+		font-style: normal
+		font-weight: normal
+		font-size: 48px
+		line-height: 64px
+		text-align: center
+		color: $dark
+	&__holder
+		display: flex
+
+	&__button
+		&:not(:last-child)
+			margin-right: 16px
+
+@include maxQ(1080px)
+	.order-banner
+		&__container
+			max-width: 960px
+
+@include maxQ(992px)
+	.order-banner
+		&__container
+			max-width: 748px
+
+@include maxQ(768px)
+	.order-banner
+		&__container
+			max-width: 650px
+		&__title
+			font-size: 36px
+
+@include maxQ(680px)
+	.order-banner
+		padding-top: 50px
+		&__container
+			padding-top: 58px
+			padding-bottom: 48px
+			max-width: 290px * 100% / 320px
+		&__title
+			font-size: 30px
+			line-height: 48px
+		&__holder
+			width: 80%
+			flex-direction: column
+		&__button
+			width: 100%
+			&:not(:last-child)
+				margin-right: 0px
+				margin-bottom: 10px
+
+@include maxQ(400px)
+	.order-banner
+		&__title
+			font-size: 24px
+			line-height: 34px
+		&__holder
+			width: 100%
+			flex-direction: column

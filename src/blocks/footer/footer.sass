@@ -1,0 +1,144 @@
+.footer
+	padding-top: 75px
+	&__container
+	&__wrapper
+		display: flex
+		margin-bottom: 160px
+
+	&__logo
+		+box(175px, 33px)
+		margin-bottom: 22px
+	&__logo-link
+		text-decoration: none
+
+	&__link
+		position: relative
+		width: fit-content
+		font-style: normal
+		font-weight: normal
+		font-size: 15px
+		line-height: 24px
+		color: $gray
+		text-decoration: none
+		@include smart-hover
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				top: calc(100% + 2px)
+				display: block
+				+box(0, 2px)
+				background-color: $gray
+				transition: .3s
+				opacity: 0
+			&:hover
+				&::after
+					width: 100%
+					opacity: 1
+
+	&-contacts
+		display: flex
+		flex-direction: column
+		margin-right: 160px
+		min-width: 221px
+		&__adress
+			margin-bottom: 10px
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 24px
+			color: $gray
+		&__link
+			font-size: 16px
+			@include smart-hover
+				&::after
+					top: 93%
+	&__social-network-link
+		margin-top: 20px
+		text-decoration: none
+	&__social-network-icon
+		+box(24px)
+	&-nav
+		display: flex
+		justify-content: space-between
+		width: 670px
+		&__list
+			margin: 0
+			padding: 0
+			list-style: none
+		&__title
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: $dark
+		&__item
+			&:first-child
+				margin-bottom: 22px
+			&:not(:first-child):not(:last-child)
+				margin-bottom: 8px
+	&__info
+		display: flex
+		justify-content: space-between
+		padding-top: 31px
+		padding-bottom: 33px
+		border-top: 1px solid #DADEDF
+	&__copyright,
+	&__policy
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: $gray
+		text-decoration: none
+
+@include maxQ(1080px)
+	.footer
+		&__container
+			max-width: 960px
+
+@include maxQ(992px)
+	.footer
+		&__container
+			max-width: 748px
+		&-contacts
+			margin-right: 55px
+		&__wrapper
+			margin-bottom: 100px
+
+@include maxQ(768px)
+	.footer
+		&__container
+			max-width: 650px
+		&__wrapper
+			justify-content: space-between
+		&-nav
+
+			flex-direction: column
+			width: auto
+			&__list
+				&:not(:last-child)
+					margin-bottom: 25px
+
+@include maxQ(680px)
+	.footer
+		&__container
+			max-width: 290px * 100% / 320px
+		&__wrapper
+			justify-content: space-between
+			flex-wrap: wrap
+		&__contacts
+			margin-bottom: 40px
+		&-nav
+			flex-direction: column
+			width: auto
+			&__list
+				&:not(:last-child)
+					margin-bottom: 25px
+		&__info
+			flex-wrap: wrap
+			align-items: center
+			padding-bottom: 23px
+			border-top: 1px solid #DADEDF
+		&__copyright
+			margin-bottom: 10px
